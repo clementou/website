@@ -4,12 +4,21 @@ automatic_scaling:
   min_instances: 0
 
 handlers:
+# Handler for CV
+- url: /cv\.pdf
+  static_files: static/cv.pdf
+  upload: static/cv\.pdf
+  secure: always
+  redirect_http_response_code: 301
+
+# Handler for other static files
 - url: /(.*\.(gif|png|jpg|css|js))$
   static_files: dist/\1
   upload: dist/(.*\.(gif|png|jpg|css|js))$
   secure: always
   redirect_http_response_code: 301
 
+# Handler for HTML
 - url: /.*
   static_files: dist/index.html
   upload: dist/index.html
