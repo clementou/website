@@ -12,8 +12,6 @@ const Education = () => {
             padding: theme.spacing(2.5),
             marginTop: theme.spacing(2.5),
             mx: 'auto',
-            width: '100%',
-            maxWidth: { md: '80%', lg: '70%' },
         }}>
             <Typography variant="h4" component="h2" gutterBottom>
                 Education

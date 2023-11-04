@@ -14,8 +14,6 @@ const Experience = () => {
             padding: theme.spacing(3),
             margin: theme.spacing(3),
             mx: 'auto',
-            width: '100%',
-            maxWidth: { md: '80%', lg: '70%' },
         }}>
             <Typography variant="h4" gutterBottom>
                 Experience

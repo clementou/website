@@ -13,12 +13,7 @@ function Header({ headshot }) {
     const theme = useTheme();
 
     return (
-        <Container component="header" maxWidth="md" sx={{ 
-            my: 4,
-            mx: 'auto', // Centers the Container
-            width: '100%', // Use 100% of the parent width
-            maxWidth: { sm: '80%', md: '70%' },
-        }}>
+        <Container component="header" sx={{ my: 4, mx: 'auto' }}>
             <Grid container spacing={2} alignItems="center" justifyContent="space-between">
                 <Grid item xs={12} sm>
                     <Typography variant="h4" gutterBottom>

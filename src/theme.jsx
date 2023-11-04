@@ -25,7 +25,33 @@ const theme = createTheme({
     },
     // Other variants...
   },
-  // You can also add custom breakpoints, components overrides and more
+  components: {
+    // Override styles for the Container component
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+          // Define default maxWidth for each breakpoint
+          '@media (min-width:0px) and (orientation: landscape)': {
+            maxWidth: '100%', // default for xs breakpoint
+          },
+          '@media (min-width:600px)': {
+            maxWidth: '80%', // sm breakpoint
+          },
+          '@media (min-width:900px)': {
+            maxWidth: '60%', // md breakpoint
+          },
+          // You can continue with other breakpoints (lg, xl) if needed
+          // '@media (min-width:1200px)': {
+          //   maxWidth: 'whateverValueYouWant', // lg breakpoint
+          // },
+          // '@media (min-width:1536px)': {
+          //   maxWidth: 'whateverValueYouWant', // xl breakpoint
+          // },
+        },
+      },
+    },
+  },
+  // Other custom theme settings can be added here
 });
 
 export default theme;

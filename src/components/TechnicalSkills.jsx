@@ -16,7 +16,7 @@ function TechnicalSkills() {
         marginBottom: theme.spacing(2.5),
         mx: 'auto', // Centers the Paper
         width: '100%', // Use 100% of the parent width
-        maxWidth: { md: '80%', lg: '70%' },
+        // maxWidth controlled by theme settings
       }} 
       className="component-container"
     >
