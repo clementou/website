@@ -1,5 +1,4 @@
-import React from 'react';
-import { useTheme } from '@mui/material/styles';
+import PropTypes from 'prop-types'; // Add this line if using PropTypes
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
@@ -10,8 +9,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import Box from '@mui/material/Box';
 
 function Header({ headshot }) {
-    const theme = useTheme();
-
     return (
         <Container component="header" sx={{ my: 4, mx: 'auto' }}>
             <Grid container spacing={2} alignItems="center" justifyContent="space-between">
@@ -20,7 +17,7 @@ function Header({ headshot }) {
                         Clement Ou
                     </Typography>
                     <Typography variant="subtitle1" gutterBottom>
-                        /'klɛmənt 'oʊ/ • 欧华 (Ōu Huá) • he/him
+                        {'/\'klɛmənt \'oʊ/'} • 欧华 (Ōu Huá) • he/him
                     </Typography>
                     <Typography variant="subtitle1" gutterBottom>
                         Palo Alto, CA
@@ -60,5 +57,10 @@ function Header({ headshot }) {
         </Container>
     );
 }
+
+// Add propTypes for type checking
+Header.propTypes = {
+    headshot: PropTypes.string.isRequired,
+};
 
 export default Header;

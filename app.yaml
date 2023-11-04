@@ -2,17 +2,16 @@ runtime: nodejs20
 instance_class: F1
 automatic_scaling:
   min_instances: 0
-  # Remove the cpu_utilization and cool_down_period configurations
-  # cool_down_period_sec: 60  # Not valid for standard environment
-  # cpu_utilization:          # Not valid for standard environment
-    # target_utilization: 0.5 # Not valid for standard environment
 
-# Handlers define the URL routing for your web service
 handlers:
 - url: /(.*\.(gif|png|jpg|css|js))$
   static_files: dist/\1
   upload: dist/(.*\.(gif|png|jpg|css|js))$
+  secure: always
+  redirect_http_response_code: 301
 
 - url: /.*
   static_files: dist/index.html
   upload: dist/index.html
+  secure: always
+  redirect_http_response_code: 301

@@ -1,5 +1,7 @@
 /* Set up a consistent box model on all elements */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 

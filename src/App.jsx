@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   ThemeProvider,
   CssBaseline,
@@ -16,7 +15,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container maxWidth="md" sx={{ my: 4 }}>
+      <Container sx={{ my: 4 }}>
         <Header headshot={headshot} />
         <Education />
         <Experience />

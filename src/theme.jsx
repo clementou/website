@@ -29,25 +29,24 @@ const theme = createTheme({
     // Override styles for the Container component
     MuiContainer: {
       styleOverrides: {
-        root: {
-          // Define default maxWidth for each breakpoint
-          '@media (min-width:0px) and (orientation: landscape)': {
+        root: ({ theme }) => ({
+          [theme.breakpoints.only('xs')]: {
             maxWidth: '100%', // default for xs breakpoint
           },
-          '@media (min-width:600px)': {
+          [theme.breakpoints.up('sm')]: {
             maxWidth: '80%', // sm breakpoint
           },
-          '@media (min-width:900px)': {
+          [theme.breakpoints.up('md')]: {
             maxWidth: '60%', // md breakpoint
           },
           // You can continue with other breakpoints (lg, xl) if needed
-          // '@media (min-width:1200px)': {
+          // [theme.breakpoints.up('lg')]: {
           //   maxWidth: 'whateverValueYouWant', // lg breakpoint
           // },
-          // '@media (min-width:1536px)': {
+          // [theme.breakpoints.up('xl')]: {
           //   maxWidth: 'whateverValueYouWant', // xl breakpoint
           // },
-        },
+        }),
       },
     },
   },

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Typography, Paper, List, ListItem, ListItemText, ListItemIcon } from '@mui/material';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
