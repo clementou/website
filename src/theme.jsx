@@ -1,10 +1,11 @@
 import { createTheme } from '@mui/material/styles';
 
 const transitionSetting = 'background-color 300ms ease-out, color 300ms ease-out';
+const noTransitionSetting = 'background-color 0ms, color 0ms';
 
-const commonThemeSettings = {
+const commonThemeSettings = (enableTransition = false) => ({
   transitions: {
-    create: () => transitionSetting,
+    create: () => (enableTransition ? transitionSetting : noTransitionSetting),
   },
   typography: {
     fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
@@ -42,7 +43,7 @@ const commonThemeSettings = {
     },
     // ... transitions for other components can be defined similarly
   },
-};
+});
 
 // Light theme specific settings
 const lightTheme = createTheme({
@@ -103,7 +104,9 @@ const darkTheme = createTheme({
 });
 
 // Function to get the theme based on mode
-export const getTheme = (mode) => (mode === 'dark' ? darkTheme : lightTheme);
+export const getTheme = (mode, enableTransition = false) => {
+  return createTheme(commonThemeSettings(enableTransition), mode === 'dark' ? darkTheme : lightTheme);
+};
 
 // Export the light theme by default
 export default getTheme;

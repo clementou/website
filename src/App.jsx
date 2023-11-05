@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -10,12 +11,21 @@ import Projects from './components/Projects';
 import TechnicalSkills from './components/TechnicalSkills';
 import getTheme from './theme';
 import headshot from './assets/headshot.jpg';
-import { useState } from 'react';
 
 function App() {
-  const [mode, setMode] = useState('light');
-  
-  const theme = getTheme(mode);
+  const [mode, setMode] = useState(localStorage.getItem('themeMode') || 'light');
+  const [enableTransition, setEnableTransition] = useState(false);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => setEnableTransition(true), 100);
+    return () => clearTimeout(timeoutId);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('themeMode', mode);
+  }, [mode]);
+
+  const theme = getTheme(mode, enableTransition);
 
   const handleModeToggle = () => {
     setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
@@ -25,18 +35,21 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
-        <Navbar onToggle={handleModeToggle} />
-        <Container sx={{ my: 4 }}>
-          <Header headshot={headshot} />
-          <Education />
-          <Experience />
-          <Projects />
-          <TechnicalSkills />
-          {/* All other components will also appear here */}
-        </Container>
+        <div className={enableTransition ? '' : 'no-transition'}>
+          <Navbar onToggle={handleModeToggle} />
+          <Container sx={{ my: 4 }}>
+            <Header headshot={headshot} />
+            <Education />
+            <Experience />
+            <Projects />
+            <TechnicalSkills />
+            {/* More components can be added here as needed */}
+          </Container>
+        </div>
       </Router>
     </ThemeProvider>
   );
 }
+
 
 export default App;
