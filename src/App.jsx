@@ -11,10 +11,23 @@ import Projects from './components/Projects';
 import TechnicalSkills from './components/TechnicalSkills';
 import getTheme from './theme';
 import headshot from './assets/headshot.jpg';
+import ReactGA from 'react-ga';
+import { useLocation } from 'react-router-dom';
 
 function App() {
   const [mode, setMode] = useState(localStorage.getItem('themeMode') || 'light');
   const [enableTransition, setEnableTransition] = useState(false);
+
+  useEffect(() => {
+    ReactGA.initialize('G-E2XDJ712SJ');
+  }, []);
+
+  const location = useLocation();
+
+useEffect(() => {
+  ReactGA.set({ page: location.pathname });
+  ReactGA.pageview(location.pathname);
+}, [location]);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => setEnableTransition(true), 100);
