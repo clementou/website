@@ -12,7 +12,6 @@ import TechnicalSkills from './components/TechnicalSkills';
 import getTheme from './theme';
 import headshot from './assets/headshot.jpg';
 import ReactGA from 'react-ga';
-import { useLocation } from 'react-router-dom';
 
 function App() {
   const [mode, setMode] = useState(localStorage.getItem('themeMode') || 'light');
@@ -20,14 +19,8 @@ function App() {
 
   useEffect(() => {
     ReactGA.initialize('G-E2XDJ712SJ');
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
-
-  const location = useLocation();
-
-useEffect(() => {
-  ReactGA.set({ page: location.pathname });
-  ReactGA.pageview(location.pathname);
-}, [location]);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => setEnableTransition(true), 100);
@@ -63,6 +56,5 @@ useEffect(() => {
     </ThemeProvider>
   );
 }
-
 
 export default App;
