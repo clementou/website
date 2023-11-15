@@ -4,7 +4,7 @@ import '../styles/SemesterMobile.css';
 import InteractiveList from './InteractiveList';
 import courseworkData from '../../assets/data/courseworkData.json';
 
-class CourseworkMobile extends React.Component {
+class CourseworkMobile extends React.Component { // TODO: make coursework-menu buttons two lines
    state = {
       currentSemester: courseworkData[0].semesterId,
       lineLeft: '6vw',
