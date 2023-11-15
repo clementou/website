@@ -1,0 +1,23 @@
+.p1-project-img-container {
+   min-width: 60%;
+   height: 35vh;
+   margin-top: 3vh;
+   background: linear-gradient(to bottom, rgba(206, 50, 89, .2), rgba(206, 50, 89, .1) 40%, rgba(10, 25, 47, .2) 100%),
+      url('../../assets/images/project1.png') no-repeat center;
+   background-size: cover;
+}
+
+.p1-project-img-container:hover {
+   background: url('../../assets/images/project1.png') no-repeat center;
+   background-size: cover;
+}
+
+.p1-project-desc-box {
+   position: absolute;
+   width: 30vw;
+   height: 32vh;
+   right: 20vw;
+   top: 562.3vh;
+   padding-top: 2vh;
+   padding-bottom: 2vh;
+}

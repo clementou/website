@@ -11,6 +11,13 @@ handlers:
   secure: always
   redirect_http_response_code: 301
 
+# Handler for font files
+- url: /assets/(.*\.ttf)$
+  static_files: dist/assets/\1
+  upload: dist/assets/(.*\.ttf)$
+  secure: always
+  redirect_http_response_code: 301
+
 # Handler for other static files
 - url: /(.*\.(gif|png|jpg|css|js))$
   static_files: dist/\1

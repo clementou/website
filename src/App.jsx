@@ -1,59 +1,69 @@
+import './App.css';
+import Navbar from './components/sections/Navbar';
+import Social from './components/sections/Social';
+import Home from './components/sections/Home';
+import About from './components/sections/About';
+import Coursework from './components/sections/Coursework';
+import Experience from './components/sections/Experience';
+// import Leadership from './components/sections/Leadership';
+// import Projects from './components/sections/Projects';
+import AboutMobile from './components/sections/AboutMobile';
+import CourseworkMobile from './components/sections/CourseworkMobile';
+import ExperienceMobile from './components/sections/ExperienceMobile';
+// import LeadershipMobile from './components/sections/LeadershipMobile';
+// import ProjectsMobile from './components/sections/ProjectsMobile';
+import SocialMobile from './components/sections/SocialMobile';
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import Container from '@mui/material/Container';
-import Navbar from './components/Navbar';
-import Header from './components/Header';
-import Education from './components/Education';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import TechnicalSkills from './components/TechnicalSkills';
-import getTheme from './theme';
-import headshot from './assets/headshot.jpg';
-import ReactGA from 'react-ga';
+import { useScrollPosition } from './hooks/useScrollPosition';
+import { trackPageview } from './analytics';
 
 function App() {
-  const [mode, setMode] = useState(localStorage.getItem('themeMode') || 'light');
-  const [enableTransition, setEnableTransition] = useState(false);
+  const [width, setWindowWidth] = useState(0);
 
   useEffect(() => {
-    ReactGA.initialize('G-E2XDJ712SJ');
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, [])
+
+  useEffect(() => {
+    trackPageview(window.location.pathname);
+
+    const handleHistoryChange = () => {
+      trackPageview(window.location.pathname);
+    };
+
+    window.addEventListener('popstate', handleHistoryChange);
+
+    return () => {
+      window.removeEventListener('popstate', handleHistoryChange);
+    };
   }, []);
 
-  useEffect(() => {
-    const timeoutId = setTimeout(() => setEnableTransition(true), 100);
-    return () => clearTimeout(timeoutId);
-  }, []);
 
-  useEffect(() => {
-    localStorage.setItem('themeMode', mode);
-  }, [mode]);
-
-  const theme = getTheme(mode, enableTransition);
-
-  const handleModeToggle = () => {
-    setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+  const updateDimensions = () => {
+    const width = window.innerWidth;
+    setWindowWidth(width);
   };
 
+  const responsive = {
+    desktop: width > 1023
+  }
+
+  const scrollPosition = useScrollPosition()
+
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Router>
-        <div className={enableTransition ? '' : 'no-transition'}>
-          <Navbar onToggle={handleModeToggle} />
-          <Container sx={{ my: 4 }}>
-            <Header headshot={headshot} />
-            <Education />
-            <Experience />
-            <Projects />
-            <TechnicalSkills />
-            {/* More components can be added here as needed */}
-          </Container>
-        </div>
-      </Router>
-    </ThemeProvider>
+    <div className={responsive.desktop ? "App" : "App-mobile"}>
+      <Navbar desktop={responsive.desktop} scrollPosition={scrollPosition} />
+      {responsive.desktop ? <Social /> : <div className="placeholder" />}
+      <Home desktop={responsive.desktop} />
+      {responsive.desktop ? <About /> : <AboutMobile />}
+      {responsive.desktop ? <Coursework /> : <CourseworkMobile />}
+      {responsive.desktop ? <Experience desktop={responsive.desktop} /> : <ExperienceMobile desktop={responsive.desktop} />}
+      {/* {responsive.desktop ? <Leadership desktop={responsive.desktop} /> : <LeadershipMobile desktop={responsive.desktop} />} TODO: Get Around to this*/}
+      {/* {responsive.desktop ? <Projects /> : <ProjectsMobile />} */}
+      {responsive.desktop ? (<div className="placeholder" />) : (<SocialMobile />)}
+    </div>
   );
 }
 

@@ -1,0 +1,82 @@
+.semester-mobile {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.semester-top-mobile {
+    width: 88vw;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.semester-bottom-mobile {
+    width: 100%;
+    height: 70%;
+    border-top: 1px solid #CE3259;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: linear-gradient(to bottom, rgba(206, 50, 89, .2) 0, rgba(206, 50, 89, .1) 40%, #0A192F 100%);
+}
+
+.semester-course-mobile {
+    font-family: "PoppinsReg";
+    color: #75809B;
+    font-size: 2.5vw;
+    margin: 0;
+    background-color: #0A192F;
+    border-style: none;
+    text-align: left;
+}
+
+.semester-course-clicked-mobile {
+    font-family: "PoppinsReg";
+    color: #CE3259;
+    font-size: 2.5vw;
+    margin: 0;
+    background-color: #0A192F;
+    border-style: none;
+    text-align: left;
+}
+
+.semester-course-box-mobile {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1vh;
+}
+
+.semester-line-box-mobile {
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.semester-line-mobile {
+    height: 100%;
+    width: 50%;
+    border-left: 1px solid #CE3259;
+}
+
+.semester-course-name-mobile {
+    font-family: 'PoppinsSemiBold';
+    color: #CCD7F6;
+    margin-left: 2vw;
+    font-size: 4vw;
+    margin: 2vh;
+}
+
+.semester-course-desc-mobile {
+    font-family: 'PoppinsReg';
+    color: #75809B;
+    margin: 2vh;
+    margin-top: 0;
+    font-size: 3vw;
+}

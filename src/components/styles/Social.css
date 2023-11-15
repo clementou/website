@@ -1,0 +1,42 @@
+svg {
+   color: #75809B;
+}
+
+svg:hover {
+   color: #CE3259;
+   scale: 1.1;
+   cursor: pointer;
+}
+
+
+.socials {
+   width: 7vw;
+   height: 40vh;
+   position: fixed;
+   bottom: 0;
+   background-color: #0a192f;
+   display: flex;
+   flex-direction: column;
+}
+
+.social-icons {
+   width: 100%;
+   height: 70%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.social-line {
+   width: 100%;
+   height: 12vh;
+   display: flex;
+   flex-direction: row-reverse;
+}
+
+.line {
+   margin-top: 2vh;
+   width: 50%;
+   border-left: 3px solid #75809B;
+}

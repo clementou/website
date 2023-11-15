@@ -1,11 +1,3 @@
-/* Set up a consistent box model on all elements */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Basic font smoothing and system fonts setup for the body */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -15,8 +7,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Consistent monospaced font for code elements */
 code {
-  font-family: 'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@font-face {
+  font-family: "PoppinsReg";
+  src: local("PoppinsReg"),
+    url("./assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PoppinsSemiBold";
+  src: local("PoppinsSemiBold"),
+    url("./assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PoppinsBold";
+  src: local("PoppinsBold"),
+    url("./assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
 }

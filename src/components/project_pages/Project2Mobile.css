@@ -1,0 +1,102 @@
+.L-project-page-mobile {
+   width: 100%;
+   height: 30vh;
+}
+
+.L-p2-overlay-mobile {
+   position: absolute;
+   width: 88vw;
+   height: 30vh;
+   left: 6vw;
+   top: 570vh;
+   border-right: 1px solid #CE3259;
+   background: linear-gradient(to left, rgba(206 , 50, 89, .2) 0, rgba(206 , 50, 89, .1) 40%, #0A192F 100%);
+}
+
+.L-p2-project-desc-box-mobile {
+   position: absolute;
+   width: 88vw;
+   height: 23vh;
+   left: 6vw;
+   top: 570vh;
+   padding-top: 2vh;
+   padding-bottom: 2vh;
+}
+
+.L-project-title-box-mobile {
+   width: 100%;
+   height: 4vh;
+}
+
+.L-project-category-mobile {
+   text-align: left;
+   color: #CE3259;
+   font-family: 'PoppinsReg';
+   font-size: 3vw;
+   margin: 0;
+}
+
+.L-project-title-mobile {
+   text-align: left;
+   color: #CCD7F6;
+   font-family: 'PoppinsSemiBold';
+   font-size: 4vw;
+   margin: 0;
+}
+
+.L-project-desc-box-mobile {
+   display: flex;
+   justify-content: flex-start;
+}
+
+.L-project-desc-mobile {
+   background-color: #112240;
+   box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+   width: 85%;
+   height: 10vh;
+   margin-top: 3vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.L-project-desc-text-mobile {
+   font-family: 'PoppinsReg';
+   color: #75809B;
+   font-size: 2.3vw;
+   text-align: left;
+   margin: 2vw;
+}
+
+
+.L-project-tools-box-mobile {
+   width: 100%;
+   height: 5vh;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+}
+
+.L-project-tools-mobile {
+   width: 85%;
+   height: 100%;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.L-project-tool-mobile {
+   font-family: 'PoppinsReg';
+   color: #75809B;
+   font-size: 2.7vw;
+}
+
+.L-project-link-box-mobile {
+   width: 100%;
+   height: 4vh;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
+}

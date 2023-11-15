@@ -1,0 +1,17 @@
+.progress-circle {
+   width: 1.5vw;
+   position: relative;
+   top: 2.49vh;
+   z-index: 11;
+}
+
+.sidebar {
+   position: absolute;
+   right: 0;
+   top: 47vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 20vw;
+   height: 200vh;
+}

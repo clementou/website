@@ -1,0 +1,107 @@
+.project-page {
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-top: 0vh;
+}
+
+.project-img-container {
+    min-width: 60%;
+    height: 35vh;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.project-page.right .project-img-container {
+    margin-left: 0vw;
+    margin-right: auto;
+}
+
+.project-page.left .project-img-container {
+    margin-left: vw;
+    margin-right: auto;
+}
+
+.project-img-container:hover {
+    transform: scale(1.05);
+}
+
+.project-desc-box {
+    background-color: #112240;
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    position: absolute;
+    width: 48.3%;
+    max-height: 40vh;
+    overflow: auto;
+    padding: 2vh;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-page.right .project-desc-box {
+    right: -2vw;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.project-page.left .project-desc-box {
+    left: -2vw;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.project-category,
+.project-title {
+    font-family: 'PoppinsSemiBold';
+    margin-bottom: 1vh;
+}
+
+.project-category {
+    color: #CE3259;
+    font-size: 1vw;
+}
+
+.project-title {
+    color: #CCD7F6;
+    font-size: 1.5vw;
+}
+
+.project-desc-text {
+    font-family: 'PoppinsReg';
+    color: #75809B;
+    font-size: 1vw;
+    margin: 1vw;
+}
+
+.project-tools-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 0vh;
+}
+
+.project-tool {
+    font-family: 'PoppinsReg';
+    color: #75809B;
+    font-size: 0.8vw;
+    margin-right: 1vw;
+}
+
+.project-link-box {
+    display: flex;
+    align-items: center;
+    margin-top: 0vh;
+}
+
+.github-icon {
+    fill: #75809B;
+    width: 2vw;
+    height: auto;
+}

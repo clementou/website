@@ -1,0 +1,29 @@
+.p3-project-img-container {
+   min-width: 60%;
+   height: 35vh;
+   margin-top: 3vh;
+   background: linear-gradient(to bottom, rgba(206 , 50, 89, .2) 0, rgba(206 , 50, 89, .1) 40%, rgba(10, 25, 47, .2) 100%), url('../../images/project3.png');
+   background-size: 36vw, 62vh;
+   background-repeat: no-repeat;
+   background-position: 0;
+}
+
+.p3-project-img-container:hover {
+   min-width: 60%;
+   height: 35vh;
+   margin-top: 3vh;
+   background: linear-gradient(to right, rgba(206 , 50, 89, 0) 0, rgba(206 , 50, 89, 0) 40%, rgba(206 , 50, 89, 0) 100%), url('../../images/project3.png');
+   background-size: 36vw, 62vh;
+   background-repeat: no-repeat;
+   background-position: 0;
+}
+
+.p3-project-desc-box { 
+   position: absolute;
+   width: 30vw;
+   height: 32vh;
+   right: 20vw;
+   top: 656vh;
+   padding-top: 2vh;
+   padding-bottom: 2vh;
+}

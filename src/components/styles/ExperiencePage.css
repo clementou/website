@@ -1,0 +1,123 @@
+.experience-page {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: .75vh;
+}
+
+.job-header-box {
+   width: 100%;
+   height: 7vh;
+   display: flex;
+   flex-direction: column;
+}
+
+.job-title-box {
+   display: flex;
+   flex-direction: row;
+   gap: .5vw;
+}
+
+.job-title {
+   font-family: 'PoppinsSemiBold';
+   font-size: 1vw;
+   color: #CCD7F6;
+   margin-top: 1vh;
+   margin-bottom: .7vh;
+}
+
+.company-title {
+   font-family: 'PoppinsSemiBold';
+   font-size: 1vw;
+   color: #CE3259;
+   margin-top: 1vh;
+   margin-bottom: .7vh;
+}
+
+.job-date {
+   font-family: 'PoppinsReg';
+   font-size: 0.75vw;
+   color: #75809B;
+   margin: 0;
+   margin-bottom: 1vh;
+}
+
+.job-desc-box {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 2vh;
+}
+
+.job-bullet {
+   width: 100%;
+   height: 8vh;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 1.5vw;
+}
+
+.bullet {
+   height: 10%;
+}
+
+.job-desc-text {
+   font-family: 'PoppinsReg';
+   font-size: .95vw;
+   color: #75809B;
+}
+
+.job-header-box-mobile {
+   width: 100%;
+   height: 8vh;
+   margin-top: 1.5vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.job-title-box-mobile {
+   display: flex;
+   flex-direction: row;
+   gap: 1.5vw;
+}
+
+.job-title-mobile {
+   font-family: 'PoppinsSemiBold';
+   font-size: 4vw;
+   color: #CCD7F6;
+   margin-top: 1vh;
+   margin-bottom: .7vh;
+}
+
+.company-title-mobile {
+   font-family: 'PoppinsSemiBold';
+   font-size: 4vw;
+   color: #CE3259;
+   margin-top: 1vh;
+   margin-bottom: .7vh;
+}
+
+.job-date-mobile {
+   font-family: 'PoppinsReg';
+   font-size: 3vw;
+   color: #75809B;
+   margin: 0;
+}
+
+.job-desc-text-mobile {
+   font-family: 'PoppinsReg';
+   font-size: 3vw;
+   color: #75809B;
+}
+
+.job-bullet-mobile {
+   width: 100%;
+   height: 8vh;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 3vw;
+}

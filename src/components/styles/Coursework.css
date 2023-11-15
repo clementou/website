@@ -1,0 +1,112 @@
+.coursework {
+   height: 100vh;
+   width: 100vw;
+   margin-top: 8vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.coursework-box {
+   margin-top: 8vh;
+   height: 60%;
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+}
+
+.coursework-title-box {
+   display: flex;
+   justify-content: space-between;
+   height: 7vh;
+   align-items: center;
+}
+
+.coursework-num {
+   font-family: 'PoppinsSemiBold';
+   color: #CE3259;
+   font-size: 2vw;
+}
+
+.coursework-title-text {
+   font-family: 'PoppinsSemiBold';
+   color: #CCD7F6;
+   font-size: 2vw;
+}
+
+.coursework-line-box {
+   display: flex;
+   flex-direction: column;
+   width: 24vw;
+   height: 100%;
+}
+
+.coursework-line {
+   height: 50%;
+   border-bottom: 1px solid #75809B;
+   width: 100%;
+}
+
+.coursework-menu {
+   height: 5vh;
+   display: flex;
+   flex-direction: column;
+   margin-top: 2vh;
+}
+
+.coursework-menu-line {
+   height: 3px;
+   width: 8.33%;
+   position: absolute;
+   background-color: #CE3259;
+   transition: left 0.3s ease;
+}
+
+.coursework-menu-buttons {
+   display: flex;
+   height: 100%;
+}
+
+.coursework-menu-button {
+   width: 100%;
+   background-color: #0a192f;
+   border-right-style: none;
+   border-left-style: none;
+   border-bottom-style: none;
+   border-top: none;
+   border-top: 3px solid #75809B;
+}
+
+.coursework-menu-button-text {
+   font-family: 'PoppinsReg';
+   font-size: 1vw;
+   color: #75809B;
+   margin: 0;
+}
+
+.coursework-menu-button-clicked {
+   width: 100%;
+   color: #CE3259;
+   background: linear-gradient(to bottom, rgba(206, 50, 89, .2) 0, rgba(206, 50, 89, .1) 40%, #0A192F 100%);
+   border-style: none;
+   border-top: 3px solid #75809B;
+}
+
+.coursework-menu-button:hover {
+   color: #CE3259;
+   background-color: rgba(206, 50, 89, .2);
+   cursor: pointer;
+}
+
+.coursework-menu-button-clicked:hover {
+   background-color: #0E2343;
+   cursor: pointer;
+}
+
+.coursework-page {
+   height: 40vh;
+}
+
+.placeholder {
+   display: none;
+}
