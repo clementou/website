@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 class ExperienceMobile extends React.Component {
    state = {
       activeExperience: experienceData[0].name,
-      lineLeft: '6vw',
+      lineLeft: '0vw',
    };
 
    handleClick = (experienceName, index) => {
