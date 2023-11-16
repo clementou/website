@@ -1,53 +1,16 @@
-.home {
-   width: 70vw;
-   height: 92vh;
-   top: 8vh;
-   margin-left: 15vw;
+.home,
+.home-mobile {
    position: relative;
    display: flex;
    flex-direction: column;
    justify-content: center;
 }
 
-.home-intro {
-   width: 100%;
-   height: 60%;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
-}
-
-.intro-text {
-   font-family: 'PoppinsReg';
-   color: #CE3259;
-   font-size: 1.5vw;
-   margin: 0;
-}
-
-.name-text {
-   font-family: 'PoppinsBold';
-   color: #CCD7F6;
-   font-size: 4vw;
-   margin: 0;
-}
-
-.desc-text {
-   font-family: 'PoppinsBold';
-   color: #75809B;
-   font-size: 3.5vw;
-   margin: 0;
-}
-
-.short-intro-box {
-   width: 65%;
-   height: 25vh;
-}
-
-.short-intro-text {
-   font-family: 'PoppinsReg';
-   color: #75809B;
-   font-size: 1.25vw;
-   margin: 0;
+.home {
+   width: 70vw;
+   height: 92vh;
+   top: 8vh;
+   margin-left: 15vw;
 }
 
 .home-mobile {
@@ -55,44 +18,84 @@
    height: 100vh;
    margin-left: 6vw;
    top: 8vh;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
 }
 
-.intro-text-mobile {
-   font-family: 'PoppinsReg';
-   color: #CE3259;
-   font-size: 5vw;
-   margin: 0;
-}
-
-.name-text-mobile {
-   font-family: 'PoppinsBold';
-   color: #CCD7F6;
-   font-size: 8vw;
-   margin: 0;
-}
-
+.home-intro,
 .home-intro-mobile {
    width: 100%;
-   height: 35%;
    display: flex;
    flex-direction: column;
    justify-content: space-around;
 }
 
-.desc-text-mobile {
-   font-family: 'PoppinsBold';
-   color: #75809B;
-   font-size: 6vw;
-   margin: 0;
+.home-intro {
+   height: 60%;
 }
 
+.home-intro-mobile {
+   height: 35%;
+}
+
+.intro-text,
+.name-text,
+.desc-text,
+.intro-text-mobile,
+.name-text-mobile,
+.desc-text-mobile,
+.short-intro-text,
 .short-intro-text-mobile {
    font-family: 'PoppinsReg';
    color: #75809B;
-   font-size: 3.5vw;
    margin: 0;
+}
+
+.name-text,
+.name-text-mobile {
+   font-family: 'PoppinsBold';
+   color: #CCD7F6;
+}
+
+.desc-text,
+.desc-text-mobile {
+   font-family: 'PoppinsBold';
+}
+
+.intro-text {
+   color: #CE3259;
+   font-size: 1.5vw;
+}
+
+.name-text {
+   font-size: 4vw;
+}
+
+.desc-text {
+   font-size: 3.5vw;
+}
+
+.short-intro-text {
+   font-size: 1.25vw;
+}
+
+.intro-text-mobile {
+   font-size: 5vw;
+   color: #CE3259;
+}
+
+.name-text-mobile {
+   font-size: 8vw;
+}
+
+.desc-text-mobile {
+   font-size: 6vw;
+}
+
+.short-intro-text-mobile {
+   font-size: 3.5vw;
    margin-top: 3vh;
+}
+
+.short-intro-box {
+   width: 65%;
+   height: 25vh;
 }

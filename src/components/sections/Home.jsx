@@ -10,7 +10,7 @@ function Home({ desktop }) {
             <p className={desktop ? "desc-text" : "desc-text-mobile"}>I study Statistics & Machine Learning @ CMU</p>
             <div className={desktop ? "short-intro-box" : "short-intro-box-mobile"}>
                <p className={desktop ? "short-intro-text" : "short-intro-text-mobile"}>
-                  {`I'm a third-year student currently learning and conducting research in Machine Learning. I am passionate about using technology to build a better future.`}
+                  {`I'm a third-year student learning about and conducting research in Machine Learning. I am passionate about using technology to build a better future.`}
                </p>
             </div>
          </div>

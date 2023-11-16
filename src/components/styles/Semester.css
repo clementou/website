@@ -1,16 +1,18 @@
-.semester {
-    width: 100%;
+.semester,
+.semester-left,
+.semester-right {
     height: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.semester {
     flex-direction: row;
 }
 
 .semester-left {
     width: 35%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     gap: 1vh;
 }
 
@@ -19,25 +21,13 @@
     height: 80%;
     border-left: 1px solid #CE3259;
     margin-top: 3.5vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     background: linear-gradient(to right, rgba(206, 50, 89, .2) 0, rgba(206, 50, 89, .1) 40%, #0A192F 100%);
 }
 
-.semester-course {
-    font-family: "PoppinsReg";
-    color: #75809B;
-    font-size: 1.5vw;
-    margin: 0;
-    background-color: #0A192F;
-    border-style: none;
-    text-align: left;
-}
-
+.semester-course,
 .semester-course-clicked {
+    color: #75809B;
     font-family: "PoppinsReg";
-    color: #CE3259;
     font-size: 1.5vw;
     margin: 0;
     background-color: #0A192F;
@@ -45,11 +35,13 @@
     text-align: left;
 }
 
-.semester-course:hover {
+.semester-course-clicked,
+.semester-course:hover,
+.semester-course-clicked:hover {
     color: #CE3259;
-    cursor: pointer;
 }
 
+.semester-course:hover,
 .semester-course-clicked:hover {
     cursor: pointer;
 }
@@ -72,18 +64,21 @@
     border-bottom: 1px solid #CE3259;
 }
 
-.semester-course-name {
-    font-family: 'PoppinsSemiBold';
-    color: #CCD7F6;
+.semester-course-name,
+.semester-course-desc {
+    font-family: 'PoppinsReg';
     margin-left: 2vw;
-    font-size: 1vw;
     margin-top: 0.5vh;
     margin-bottom: 0.5vh;
 }
 
+.semester-course-name {
+    color: #CCD7F6;
+    font-size: 1vw;
+    font-family: 'PoppinsSemiBold';
+}
+
 .semester-course-desc {
-    font-family: 'PoppinsReg';
     color: #75809B;
-    margin-left: 2vw;
     font-size: .95vw;
 }

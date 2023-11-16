@@ -1,13 +1,9 @@
-.App {
-  background-color: #0a192f;
-  width: 100vw;
-  height: 830vh;
-}
-
+.App,
 .App-mobile {
   background-color: #0a192f;
   width: 100vw;
-  height: 740vh;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .placeholder {

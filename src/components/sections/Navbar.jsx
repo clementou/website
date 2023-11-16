@@ -11,12 +11,8 @@ class Navbar extends React.Component {
       showMenu: false
    };
 
-   openMenu = () => {
-      this.setState({ showMenu: true });
-   }
-
-   closeMenu = () => {
-      this.setState({ showMenu: false });
+   toggleMenu = () => {
+      this.setState(prevState => ({ showMenu: !prevState.showMenu }));
    }
 
    render() {
@@ -41,35 +37,35 @@ class Navbar extends React.Component {
                   <Link className="logo-mobile" to="Home" smooth={true}>
                      <img src={logo} alt='Logo' className='logo-mobile' />
                   </Link>
-                  <button className="menu-button-mobile" onClick={this.openMenu}>
+                  <button className="menu-button-mobile" onClick={this.toggleMenu}>
                      <img src={menu} alt='Menu' className='menu-mobile' />
                   </button>
                   {this.state.showMenu ? (<div className="menu-mobile-box">
                      <div className="menu-mobile-blur" />
                      <div className="menu-bg-mobile">
                         <div className="close-box-mobile">
-                           <img src={close} className="close-button-mobile" onClick={this.closeMenu} />
+                           <img src={close} className="close-button-mobile" onClick={this.toggleMenu} />
                         </div>
                         <div className="menu-mobile-button-box">
-                           <Link className="menu-mobile-button" to="AboutMobile" smooth={true} onClick={this.closeMenu}>About</Link>
+                           <Link className="menu-mobile-button" to="AboutMobile" smooth={true} onClick={this.toggleMenu}>About</Link>
                         </div>
                         <div className="menu-mobile-button-box">
-                           <Link className="menu-mobile-button" to="CourseworkMobile" smooth={true} onClick={this.closeMenu}>Coursework</Link>
+                           <Link className="menu-mobile-button" to="CourseworkMobile" smooth={true} onClick={this.toggleMenu}>Coursework</Link>
                         </div>
                         <div className="menu-mobile-button-box">
-                           <Link className="menu-mobile-button" to="ExperienceMobile" smooth={true} onClick={this.closeMenu}>Experience</Link>
+                           <Link className="menu-mobile-button" to="ExperienceMobile" smooth={true} onClick={this.toggleMenu}>Experience</Link>
                         </div>
                         {/* <div className="menu-mobile-button-box">
-                           <Link className="menu-mobile-button" to="LeadershipMobile" smooth={true} onClick={this.closeMenu}>Leadership</Link>
+                           <Link className="menu-mobile-button" to="LeadershipMobile" smooth={true} onClick={this.toggleMenu}>Leadership</Link>
                         </div> */}
                         <div className="menu-mobile-button-box">
-                           <Link className="menu-mobile-button" to="ProjectsMobile" smooth={true} onClick={this.closeMenu}>Projects</Link>
+                           <Link className="menu-mobile-button" to="ProjectsMobile" smooth={true} onClick={this.toggleMenu}>Projects</Link>
                         </div>
                         <div className="menu-mobile-button-box">
-                           <Link className="menu-mobile-button" to="SocialMobile" smooth={true} onClick={this.closeMenu}>Contacts</Link>
+                           <Link className="menu-mobile-button" to="SocialMobile" smooth={true} onClick={this.toggleMenu}>Contacts</Link>
                         </div>
                         <div className='menu-mobile-button-box'>
-                           <a href="/cv.pdf" download className="resume-mobile-button" onClick={this.closeMenu}>Resume</a>
+                           <a href="/cv.pdf" download className="resume-mobile-button" onClick={this.toggleMenu}>Resume</a>
                         </div>
                      </div>
                   </div>)

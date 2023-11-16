@@ -1,4 +1,5 @@
-.navbar {
+.navbar,
+.navbar-shadow {
    background-color: #0a192f;
    width: 100vw;
    height: 8vh;
@@ -8,12 +9,6 @@
 }
 
 .navbar-shadow {
-   background-color: #0a192f;
-   width: 100vw;
-   height: 8vh;
-   position: fixed;
-   z-index: 11;
-   padding-top: 1vh;
    display: flex;
    flex-direction: row;
    justify-content: space-between;
@@ -21,15 +16,7 @@
    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
 }
 
-.nav-desktop {
-   width: 100%;
-   height: 100%;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: center;
-}
-
+.nav-desktop,
 .nav-mobile {
    width: 100%;
    height: 100%;
@@ -39,9 +26,14 @@
    align-items: center;
 }
 
-.logo {
+.logo,
+.logo-mobile {
    height: 70%;
    margin-left: 1.2vw;
+}
+
+.logo-mobile {
+   margin-left: 4vw;
 }
 
 .logo:hover {
@@ -49,14 +41,20 @@
    cursor: pointer;
 }
 
+.nav-right,
+.menu-mobile-button-box,
+.close-box-mobile,
+.resume-mobile-button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
 .nav-right {
-   background-color: #0a192f;
    width: 45%;
    height: 100%;
-   display: flex;
    flex-direction: row;
    justify-content: space-around;
-   align-items: center;
    margin-right: 2vw;
 }
 
@@ -91,11 +89,6 @@
 .resume-button:hover {
    background-color: rgba(206, 50, 89, .2);
    cursor: pointer;
-}
-
-.logo-mobile {
-   height: 70%;
-   margin-left: 4vw;
 }
 
 .menu-button-mobile {
@@ -134,7 +127,7 @@
    height: 200vh;
    width: 70%;
    background-color: #0A192F;
-   animation: slideleft 1s forwards;
+   animation: slideleft 0.4s forwards;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -155,10 +148,8 @@
 .close-box-mobile {
    width: 100%;
    height: 8vh;
-   display: flex;
    flex-direction: row-reverse;
    justify-content: flex-start;
-   align-items: center;
    margin-bottom: 3vh;
 }
 
@@ -171,10 +162,7 @@
    width: 100%;
    height: 6vh;
    margin-bottom: 2vh;
-   display: flex;
    justify-content: flex-end;
-   align-items: center;
-   gap: 3vw;
 }
 
 .menu-mobile-number {
