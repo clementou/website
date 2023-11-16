@@ -19,8 +19,12 @@ function AboutMobile() {
             <div className="headshot-box-mobile">
                <img src={headshot} alt="Headshot" className="headshot-mobile" />
             </div>
-            <p className="about-text-mobile">Hi! My name is Clement Ou and I am a student at Carnegie Mellon University passionate about data science, machine learning, and problem solving. I have experience with full-stack development, data science, as well as ML engineering. I hope to use my skills to build a better future.</p>
-            <p className="about-text-mobile">Outside of academics, I have a variety of interests and hobbies I like to pursue, including film, history, running, and travel.</p>
+            <p className="about-text-mobile">
+               Hi! My name is Clement Ou and I am a student at Carnegie Mellon University passionate about data science, machine learning, and problem solving. I have experience with full-stack development, data science, as well as ML engineering. I hope to use my skills to build a better future.
+            </p>
+            <p className="about-text-mobile">
+               Outside of academics, I have a variety of interests and hobbies I like to pursue, including film, history, running, and travel.
+            </p>
             <p className="skills-title-mobile">Languages and Technologies</p>
             <div className="langs-box-mobile">
                {skills.map(skill => (

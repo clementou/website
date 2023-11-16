@@ -5,33 +5,33 @@
         "courses": [
             {
                 "id": "c1",
-                "number": "36-226",
-                "name": "Introduction to Statistical Inference",
-                "desc": "Advances into statistical data analysis and inferential methods, exploring estimation, hypothesis testing, linear models, and ANOVA, with practical applications and data interpretation, potentially expanding into categorical and nonparametric statistics, and Bayesian inference."
+                "number": "10-315",
+                "name": "Introduction to Machine Learning (SCS Majors)",
+                "desc": "Delves into machine learning, encompassing core concepts, algorithms, and applications, with emphasis on practical skills in selecting and applying supervised and unsupervised learning methods, and understanding key principles like model selection and overfitting."
             },
             {
                 "id": "c2",
-                "number": "15-213",
-                "name": "Introduction to Computer Systems",
-                "desc": "Provides an in-depth understanding of computer systems from a programmer's viewpoint, focusing on execution, storage, and communication to improve performance and reliability, and prepares for further study in areas like compilers and operating systems."
-            },
-            {
-                "id": "c3",
-                "number": "10-315",
-                "name": "Introduction to Machine Learning (SCS Majors)",
-                "desc": "Teaches students to create and evaluate algorithms for tasks like facial recognition and autonomous navigation, covering both the theoretical foundations and practical skills in supervised and unsupervised learning."
-            },
-            {
-                "id": "c4",
                 "number": "15-281",
                 "name": "Artificial Intelligence: Representation and Problem Solving",
                 "desc": "Covers the creation of intelligent systems for optimal decision-making and problem-solving across domains, focusing on algorithms, uncertainty, learning, and ethics, culminating in an understanding of AI's foundations and decision-making strategies."
             },
             {
-                "id": "c5",
+                "id": "c3",
+                "number": "15-213",
+                "name": "Introduction to Computer Systems",
+                "desc": "Provides an in-depth understanding of computer systems from a programmer's viewpoint, focusing on execution, storage, and communication to improve performance and reliability, and prepares for further study in areas like compilers and operating systems."
+            },
+            {
+                "id": "c4",
                 "number": "94-475",
                 "name": "Practical Unstructured Data Analytics",
                 "desc": "Offers a hands-on approach to analyzing unstructured data—such as text, images, and video—teaching methods to uncover underlying patterns through visualization and exploratory techniques, and leveraging this structure for predictive insights. It ends with a policy-oriented final project."
+            },
+            {
+                "id": "c5",
+                "number": "36-226",
+                "name": "Introduction to Statistical Inference",
+                "desc": "Explores advanced statistical methods, focusing on data analysis, estimation techniques, hypothesis testing, and linear models, with a practical approach to applying statistical theory."
             }
         ]
     },
@@ -41,21 +41,21 @@
         "courses": [
             {
                 "id": "c1",
+                "number": "15-351",
+                "name": "Algorithms and Advanced Data Structures",
+                "desc": "Examines algorithm design principles and the efficient data structures that support them, covering topics like run time analysis, various algorithmic strategies, and NP-completeness, with a focus on theoretical problem-solving rather than programming."
+            },
+            {
+                "id": "c2",
                 "number": "95-482",
                 "name": "Enterprise Web Development",
                 "desc": "Explores the intricacies of enterprise web application development, focusing on server-side programming, n-tier architecture, and user-centric personalization, culminating in the hands-on creation of a comprehensive web application utilizing technologies like PHP, Django, and MySQL."
             },
             {
-                "id": "c2",
+                "id": "c33",
                 "number": "36-315",
                 "name": "Statistical Graphics and Visualization",
                 "desc": "Introduces common graphical displays for quantitative data, their creation, interpretation, and potential pitfalls, alongside a project applying these methods to real-world scientific or engineering data, complemented by practical lab sessions on graphical software usage."
-            },
-            {
-                "id": "c3",
-                "number": "15-351",
-                "name": "Algorithms and Advanced Data Structures",
-                "desc": "Examines algorithm design principles and the efficient data structures that support them, covering topics like run time analysis, various algorithmic strategies, and NP-completeness, with a focus on theoretical problem-solving rather than programming."
             },
             {
                 "id": "c4",
@@ -77,15 +77,15 @@
         "courses": [
             {
                 "id": "c1",
-                "number": "48-241",
-                "name": "History of Modern Architecture",
-                "desc": "Investigates the global evolution of 20th-century modern architecture and theory, questioning established narratives and examining the impact of colonialism, globalization, and capitalism, while considering diverse worldwide architectural responses, with content that adapts annually to reflect contemporary understandings and contexts."
-            },
-            {
-                "id": "c2",
                 "number": "73-102",
                 "name": "Principles of Microeconomics",
                 "desc": "Introduces microeconomic principles and economic reasoning, examining individual decision-making, market dynamics, the role of government, and strategic interaction, with a practical approach to understanding everyday economic questions and building a toolkit for market analysis."
+            },
+            {
+                "id": "c2",
+                "number": "48-241",
+                "name": "History of Modern Architecture",
+                "desc": "Investigates the global evolution of 20th-century modern architecture and theory, questioning established narratives and examining the impact of colonialism, globalization, and capitalism, while considering diverse worldwide architectural responses, with content that adapts annually to reflect contemporary understandings and contexts."
             },
             {
                 "id": "c3",
@@ -101,15 +101,15 @@
         "courses": [
             {
                 "id": "c1",
-                "number": "03-125",
-                "name": "Evolution",
-                "desc": "Provides an essential understanding of evolutionary theory as the cornerstone of biology, covering its history, foundational facts, phylogenetics, genetics, and mechanisms driving life's diversity, along with specialized topics like evolutionary medicine and genome evolution."
-            },
-            {
-                "id": "c2",
                 "number": "36-225",
                 "name": "Introduction to Probability Theory",
                 "desc": "Introduces probability and mathematical statistics for data science students, covering basic theory, random variables, various distributions, and foundational principles like the law of large numbers and the central limit theorem."
+            },
+            {
+                "id": "c2",
+                "number": "03-125",
+                "name": "Evolution",
+                "desc": "Provides an essential understanding of evolutionary theory as the cornerstone of biology, covering its history, foundational facts, phylogenetics, genetics, and mechanisms driving life's diversity, along with specialized topics like evolutionary medicine and genome evolution."
             },
             {
                 "id": "c3",
@@ -125,15 +125,15 @@
         "courses": [
             {
                 "id": "c1",
-                "number": "21-122",
-                "name": "Integration and Approximation",
-                "desc": "Covers integration techniques like trigonometric substitution and partial fractions, numerical integration methods, differential equations, optimization algorithms, Taylor's Theorem with remainders, and series analysis, alongside parametric curves, polar coordinates, and vector fundamentals, delivered through lectures and recitations."
+                "number": "36-302",
+                "name": "Methods for Statistics & Data Science",
+                "desc": "Advances statistical principles, delving into regression analysis, logistic regression, ANOVA, and introductory machine learning, with a strong emphasis on using R Studio for data analysis and model creation, culminating in projects that synthesize statistical methods, reproducibility, and ethical considerations in data use."
             },
             {
                 "id": "c2",
-                "number": "36-302",
-                "name": "Methods for Statistics & Data Science",
-                "desc": "Advances first-semester statistical principles, delving into regression analysis, logistic regression, ANOVA, and introductory machine learning, with a strong emphasis on using R Studio for data analysis and model creation, culminating in projects that synthesize statistical methods, reproducibility, and ethical considerations in data use."
+                "number": "21-122",
+                "name": "Integration and Approximation",
+                "desc": "Covers integration techniques like trigonometric substitution and partial fractions, numerical integration methods, differential equations, optimization algorithms, Taylor's Theorem with remainders, and series analysis, alongside parametric curves, polar coordinates, and vector fundamentals, delivered through lectures and recitations."
             },
             {
                 "id": "c3",
