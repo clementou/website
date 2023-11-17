@@ -1,52 +1,52 @@
 .projects-mobile {
-   height: 170vh;
-   width: 100vw;
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
-   align-items: center;
+    height: 170vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .space {
-   width: 100%;
-   height: 10vh;
+    width: 100%;
+    height: 10vh;
 }
 
 .projects-box-mobile {
-   height: 100vh;
-   width: 88vw;
-   margin-top: 0;
+    height: 100vh;
+    width: 88vw;
+    margin-top: 0;
 }
 
 .projects-title-box-mobile {
-   display: flex;
-   justify-content: flex-start;
-   gap: 2vw;
-   height: 7vh;
-   align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2vw;
+    height: 7vh;
+    align-items: center;
 }
 
 .projects-num-mobile {
-   font-family: 'PoppinsSemiBold';
-   color: #CE3259;
-   font-size: 6vw;
+    font-family: 'PoppinsSemiBold';
+    color: #CE3259;
+    font-size: 6vw;
 }
 
 .projects-title-text-mobile {
-   font-family: 'PoppinsSemiBold';
-   color: #CCD7F6;
-   font-size: 6vw;
+    font-family: 'PoppinsSemiBold';
+    color: #CCD7F6;
+    font-size: 6vw;
 }
 
 .projects-line-box-mobile {
-   display: flex;
-   flex-direction: column;
-   width: 20.5vw;
-   height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 20.5vw;
+    height: 100%;
 }
 
 .projects-line-mobile {
-   height: 50%;
-   border-bottom: 1px solid #75809B;
-   width: 100%;
+    height: 50%;
+    border-bottom: 1px solid #75809B;
+    width: 100%;
 }

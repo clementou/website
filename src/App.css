@@ -1,11 +1,11 @@
 .App,
 .App-mobile {
-  background-color: #0a192f;
-  width: 100vw;
-  min-height: 100vh;
-  overflow-x: hidden;
+    background-color: #0a192f;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .placeholder {
-  display: none;
+    display: none;
 }
