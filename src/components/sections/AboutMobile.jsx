@@ -1,5 +1,5 @@
 import '../styles/AboutMobile.css';
-import headshot from '../../assets/images/headshot.jpg';
+import headshot from '../../assets/images/headshot.png';
 import arrow from '../../assets/images/arrow.png';
 
 const skills = ['R', 'Python', 'C', 'C++', 'Java', 'JavaScript', 'HTML', 'CSS', 'React', 'Shell', 'Docker', 'Kubernetes'];
