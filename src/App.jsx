@@ -18,53 +18,53 @@ import { useScrollPosition } from './hooks/useScrollPosition';
 import { trackPageview } from './analytics';
 
 function App() {
-    const [width, setWindowWidth] = useState(0);
+  const [width, setWindowWidth] = useState(0);
 
-    useEffect(() => {
-        updateDimensions();
-        window.addEventListener("resize", updateDimensions);
-        return () => window.removeEventListener("resize", updateDimensions);
-    }, [])
+  useEffect(() => {
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, [])
 
-    useEffect(() => {
-        trackPageview(window.location.pathname);
+  useEffect(() => {
+    trackPageview(window.location.pathname);
 
-        const handleHistoryChange = () => {
-            trackPageview(window.location.pathname);
-        };
-
-        window.addEventListener('popstate', handleHistoryChange);
-
-        return () => {
-            window.removeEventListener('popstate', handleHistoryChange);
-        };
-    }, []);
-
-
-    const updateDimensions = () => {
-        const width = window.innerWidth;
-        setWindowWidth(width);
+    const handleHistoryChange = () => {
+      trackPageview(window.location.pathname);
     };
 
-    const responsive = {
-        desktop: width > 1023
-    }
+    window.addEventListener('popstate', handleHistoryChange);
 
-    const scrollPosition = useScrollPosition()
+    return () => {
+      window.removeEventListener('popstate', handleHistoryChange);
+    };
+  }, []);
 
-    return (
-        <div className={responsive.desktop ? "App" : "App-mobile"}>
-            <Navbar desktop={responsive.desktop} scrollPosition={scrollPosition} />
-            {responsive.desktop ? <Social /> : <div className="placeholder" />}
-            <Home desktop={responsive.desktop} />
-            {responsive.desktop ? <About /> : <AboutMobile />}
-            {responsive.desktop ? <Coursework /> : <CourseworkMobile />}
-            {responsive.desktop ? <Experience desktop={responsive.desktop} /> : <ExperienceMobile desktop={responsive.desktop} />}
-            {/* {responsive.desktop ? <Leadership desktop={responsive.desktop} /> : <LeadershipMobile desktop={responsive.desktop} />} TODO: Get Around to this*/}
-            {/* {responsive.desktop ? <Projects /> : <ProjectsMobile />} */}
-            {responsive.desktop ? (<div className="placeholder" />) : (<SocialMobile />)}
-        </div>
-    );
+
+  const updateDimensions = () => {
+    const width = window.innerWidth;
+    setWindowWidth(width);
+  };
+
+  const responsive = {
+    desktop: width > 1023
+  }
+
+  const scrollPosition = useScrollPosition()
+
+  return (
+    <div className={responsive.desktop ? "App" : "App-mobile"}>
+      <Navbar desktop={responsive.desktop} scrollPosition={scrollPosition} />
+      {responsive.desktop ? <Social /> : <div className="placeholder" />}
+      <Home desktop={responsive.desktop} />
+      {responsive.desktop ? <About /> : <AboutMobile />}
+      {responsive.desktop ? <Coursework /> : <CourseworkMobile />}
+      {responsive.desktop ? <Experience desktop={responsive.desktop} /> : <ExperienceMobile desktop={responsive.desktop} />}
+      {/* {responsive.desktop ? <Leadership desktop={responsive.desktop} /> : <LeadershipMobile desktop={responsive.desktop} />} TODO: Get Around to this*/}
+      {/* {responsive.desktop ? <Projects /> : <ProjectsMobile />} */}
+      {responsive.desktop ? (<div className="placeholder" />) : (<SocialMobile />)}
+    </div>
+  );
 }
 
 export default App;
