@@ -6,12 +6,12 @@ import About from './components/sections/About';
 import Coursework from './components/sections/Coursework';
 import Experience from './components/sections/Experience';
 // import Leadership from './components/sections/Leadership';
-import Projects from './components/sections/Projects';
+// import Projects from './components/sections/Projects';
 import AboutMobile from './components/sections/AboutMobile';
 import CourseworkMobile from './components/sections/CourseworkMobile';
 import ExperienceMobile from './components/sections/ExperienceMobile';
 // import LeadershipMobile from './components/sections/LeadershipMobile';
-import ProjectsMobile from './components/sections/ProjectsMobile';
+// import ProjectsMobile from './components/sections/ProjectsMobile';
 import SocialMobile from './components/sections/SocialMobile';
 import { useState, useEffect } from 'react';
 import { useScrollPosition } from './hooks/useScrollPosition';
@@ -61,7 +61,7 @@ function App() {
       {responsive.desktop ? <Coursework /> : <CourseworkMobile />}
       {responsive.desktop ? <Experience desktop={responsive.desktop} /> : <ExperienceMobile desktop={responsive.desktop} />}
       {/* {responsive.desktop ? <Leadership desktop={responsive.desktop} /> : <LeadershipMobile desktop={responsive.desktop} />} TODO: Get Around to this*/}
-      {responsive.desktop ? <Projects /> : <ProjectsMobile />}
+      {/* {responsive.desktop ? <Projects /> : <ProjectsMobile />} */}
       {responsive.desktop ? (<div className="placeholder" />) : (<SocialMobile />)}
     </div>
   );
