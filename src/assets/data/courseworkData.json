@@ -11,9 +11,9 @@
             },
             {
                 "id": "c2",
-                "number": "15-281",
-                "name": "Artificial Intelligence: Representation and Problem Solving",
-                "desc": "Covers the creation of intelligent systems for optimal decision-making and problem-solving across domains, focusing on algorithms, uncertainty, learning, and ethics, culminating in an understanding of AI's foundations and decision-making strategies."
+                "number": "17-214",
+                "name": "Principles of Software Construction: Objects, Design, and Concurrency",
+                "desc": "Explores advanced software construction techniques, focusing on object-oriented design, static and dynamic program analysis, and concurrency concepts, culminating in a medium-sized Java project."
             },
             {
                 "id": "c3",
@@ -23,9 +23,9 @@
             },
             {
                 "id": "c4",
-                "number": "94-475",
-                "name": "Practical Unstructured Data Analytics",
-                "desc": "Offers a hands-on approach to analyzing unstructured data—such as text, images, and video—teaching methods to uncover underlying patterns through visualization and exploratory techniques, and leveraging this structure for predictive insights. It ends with a policy-oriented final project."
+                "number": "94-886",
+                "name": "Advances in Robotic Process Automation",
+                "desc": "Introduces Robotic Process Automation fundamentals, emphasizing AI and machine learning integration, process identification for automation, and strategic consultancy for real-world automation projects."
             },
             {
                 "id": "c5",
@@ -47,7 +47,7 @@
             },
             {
                 "id": "c2",
-                "number": "95-482",
+                "number": "95-882",
                 "name": "Enterprise Web Development",
                 "desc": "Explores the intricacies of enterprise web application development, focusing on server-side programming, n-tier architecture, and user-centric personalization, culminating in the hands-on creation of a comprehensive web application utilizing technologies like PHP, Django, and MySQL."
             },
