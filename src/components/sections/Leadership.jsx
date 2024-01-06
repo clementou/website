@@ -1,50 +1,36 @@
 import '../styles/Leadership.css';
 import Leadership1 from '../leadership_pages/Leadership1';
 import Leadership2 from '../leadership_pages/Leadership2';
-import Leadership3 from '../leadership_pages/Leadership3';
 import React from 'react';
 import $ from 'jquery';
+import PropTypes from 'prop-types';
 
 class Leadership extends React.Component {
   constructor() {
     super();
     this.state = {
-      h4i: true,
-      pamc: false,
-      ws: false
+      suds: true,
+      dsc: false,
     };
-    this.handleClick_h4i = this.handleClick_h4i.bind(this);
-    this.handleClick_pamc = this.handleClick_pamc.bind(this);
-    this.handleClick_ws = this.handleClick_ws.bind(this);
+    this.handleClick_suds = this.handleClick_suds.bind(this);
+    this.handleClick_dsc = this.handleClick_dsc.bind(this);
     this.slideTransition1 = this.slideTransition1.bind(this);
     this.slideTransition2 = this.slideTransition2.bind(this);
-    this.slideTransition3 = this.slideTransition3.bind(this);
   }
 
-  handleClick_h4i(e) {
+  handleClick_suds(e) {
     e.preventDefault();
     this.setState({
-      h4i: true,
-      pamc: false,
-      ws: false
+      suds: true,
+      dsc: false,
     });
   }
 
-  handleClick_pamc(e) {
+  handleClick_dsc(e) {
     e.preventDefault();
     this.setState({
-      h4i: false,
-      pamc: true,
-      ws: false
-    });
-  }
-
-  handleClick_ws(e) {
-    e.preventDefault();
-    this.setState({
-      h4i: false,
-      pamc: false,
-      ws: true
+      suds: false,
+      dsc: true,
     });
   }
 
@@ -60,16 +46,9 @@ class Leadership extends React.Component {
     });
   }
 
-  slideTransition3 = () => {
-    $("#leadership-button3").on("click", function () {
-      $(".leadership-menu-line").animate({ top: '462vh' });
-    });
-  }
-
   componentDidMount() {
     this.slideTransition1();
     this.slideTransition2();
-    this.slideTransition3();
   }
 
   render() {
@@ -87,19 +66,21 @@ class Leadership extends React.Component {
             <div className="leadership-menu">
               <span className="leadership-menu-line" />
               <div className="leadership-menu-buttons">
-                <button id="leadership-button1" className={this.state.h4i ? "leadership-menu-button-clicked" : "leadership-menu-button"} onClick={this.handleClick_h4i}>Hack4Impact</button>
-                <button id="leadership-button2" className={this.state.ws ? "leadership-menu-button-clicked" : "leadership-menu-button"} onClick={this.handleClick_ws}>Workshops</button>
-                <button id="leadership-button3" className={this.state.pamc ? "leadership-menu-button-clicked" : "leadership-menu-button"} onClick={this.handleClick_pamc}>Palo Alto Music Connection</button>
+                <button id="leadership-button1" className={this.state.suds ? "leadership-menu-button-clicked" : "leadership-menu-button"} onClick={this.handleClick_suds}>Students Using Data For Social Good</button>
+                <button id="leadership-button2" className={this.state.dsc ? "leadership-menu-button-clicked" : "leadership-menu-button"} onClick={this.handleClick_dsc}>Data Science Club</button>
               </div>
             </div>
-            {this.state.h4i ? (<div className="leadership-desc"><Leadership1 desktop={this.props.desktop} /></div>) : (<div className="placeholder" />)}
-            {this.state.ws ? (<div className="leadership-desc"><Leadership2 desktop={this.props.desktop} /></div>) : (<div className="placeholder" />)}
-            {this.state.pamc ? (<div className="leadership-desc"><Leadership3 desktop={this.props.desktop} /></div>) : (<div className="placeholder" />)}
+            {this.state.suds ? (<div className="leadership-desc"><Leadership1 desktop={this.props.desktop} /></div>) : (<div className="placeholder" />)}
+            {this.state.dsc ? (<div className="leadership-desc"><Leadership2 desktop={this.props.desktop} /></div>) : (<div className="placeholder" />)}
           </div>
         </div>
       </div>
     );
   }
 }
+
+Leadership.propTypes = {
+  desktop: PropTypes.bool.isRequired,
+};
 
 export default Leadership;
