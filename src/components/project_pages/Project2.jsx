@@ -6,7 +6,7 @@ import GitHubIcon from '../../icons/github';
 function Project2() {
   return (
     <div className="L-project-page">
-      <div className="L-p2-project-img-container" />
+      <div className="L-p2-project-img-container"/>
       <div className="p2-L-project-desc-box">
         <div className="L-project-title-box">
           <p className="L-project-category">Technica Hackathon Winner</p>
@@ -26,12 +26,12 @@ function Project2() {
         </div>
         <div className="L-project-link-box">
           <a href="https://github.com/sadena27/meal-planner">
-            <GitHubIcon />
+            <GitHubIcon/>
           </a>
         </div>
       </div>
     </div>
   );
 }
-
+ 
 export default Project2;

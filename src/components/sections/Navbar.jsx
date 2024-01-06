@@ -58,9 +58,9 @@ class Navbar extends React.Component {
                 <div className="menu-mobile-button-box">
                   <Link className="menu-mobile-button" to="LeadershipMobile" smooth={true} onClick={this.toggleMenu}>Leadership</Link>
                 </div>
-                <div className="menu-mobile-button-box">
+                {/* <div className="menu-mobile-button-box">
                   <Link className="menu-mobile-button" to="ProjectsMobile" smooth={true} onClick={this.toggleMenu}>Projects</Link>
-                </div>
+                </div> */}
                 <div className="menu-mobile-button-box">
                   <Link className="menu-mobile-button" to="SocialMobile" smooth={true} onClick={this.toggleMenu}>Contacts</Link>
                 </div>
