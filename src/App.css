@@ -1,7 +1,7 @@
 .App,
 .App-mobile {
   background-color: #0a192f;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
 }
