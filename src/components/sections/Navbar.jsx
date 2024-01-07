@@ -29,7 +29,7 @@ class Navbar extends React.Component {
               <Link className="nav-button" to="Experience" smooth={true}>Experience</Link>
               <Link className="nav-button" to="Leadership" smooth={true}>Leadership</Link>
               {/* <Link className="nav-button" to="Projects" smooth={true}>Projects</Link> */}
-              <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="resume-button">Resume</a>
+              <a href="/Clement_Ou_resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-button">Resume</a>
             </div>
           </div>)
           :
@@ -65,7 +65,7 @@ class Navbar extends React.Component {
                   <Link className="menu-mobile-button" to="SocialMobile" smooth={true} onClick={this.toggleMenu}>Contacts</Link>
                 </div>
                 <div className='menu-mobile-button-box'>
-                  <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="resume-mobile-button" onClick={this.toggleMenu}>Resume</a>
+                  <a href="/Clement_Ou_resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-mobile-button" onClick={this.toggleMenu}>Resume</a>
                 </div>
               </div>
             </div>)
