@@ -12,7 +12,6 @@ import CourseworkMobile from './components/sections/CourseworkMobile';
 import ExperienceMobile from './components/sections/ExperienceMobile';
 import LeadershipMobile from './components/sections/LeadershipMobile';
 // import ProjectsMobile from './components/sections/ProjectsMobile';
-import SocialMobile from './components/sections/SocialMobile';
 import { useState, useEffect } from 'react';
 import { useScrollPosition } from './hooks/useScrollPosition';
 import { trackPageview } from './analytics';
@@ -62,7 +61,7 @@ function App() {
       {responsive.desktop ? <Experience desktop={responsive.desktop} /> : <ExperienceMobile desktop={responsive.desktop} />}
       {responsive.desktop ? <Leadership desktop={responsive.desktop} /> : <LeadershipMobile desktop={responsive.desktop} />}
       {/* {responsive.desktop ? <Projects /> : <ProjectsMobile />} */}
-      {responsive.desktop ? (<div className="placeholder" />) : (<SocialMobile />)}
+      {!responsive.desktop && <Social />}
     </div>
   );
 }

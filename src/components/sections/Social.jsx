@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import '../styles/Social.css';
 import GitHubIcon from '../../icons/github';
 import InstagramIcon from '../../icons/instagram';
@@ -6,34 +7,30 @@ import LinkedinIcon from '../../icons/linkedin';
 import EmailIcon from '../../icons/email';
 import PlexIcon from '../../icons/plex';
 
-function Social() {
+const SocialIcon = ({ href, IconComponent }) => (
+  <a href={href} className="social-icon">
+    <IconComponent className="svg-icon" />
+  </a>
+);
+
+SocialIcon.propTypes = {
+  href: PropTypes.string.isRequired,
+  IconComponent: PropTypes.elementType.isRequired
+};
+
+const Social = () => {
   return (
     <div className="socials">
       <div className="social-icons">
-        <a href="https://github.com/clementou">
-          <GitHubIcon className="svg-icon" />
-        </a>
-        <a href="https://www.instagram.com/ouclement">
-          <InstagramIcon className="svg-icon" />
-        </a>
-        <a href="https://www.twitter.com/ClementOu">
-          <TwitterIcon className="svg-icon" />
-        </a>
-        <a href="https://www.linkedin.com/in/clementou">
-          <LinkedinIcon className="svg-icon" />
-        </a>
-        <a href="mailto: clement.h.ou@gmail.com">
-          <EmailIcon className="svg-icon" />
-        </a>
-        <a href="https://plex.clementou.com">
-          <PlexIcon className="svg-icon" />
-        </a>
-      </div>
-      <div className="social-line">
-        <div className="line" />
+        <SocialIcon href="https://github.com/clementou" IconComponent={GitHubIcon} />
+        <SocialIcon href="https://www.instagram.com/ouclement" IconComponent={InstagramIcon} />
+        <SocialIcon href="https://www.twitter.com/ClementOu" IconComponent={TwitterIcon} />
+        <SocialIcon href="https://www.linkedin.com/in/clementou" IconComponent={LinkedinIcon} />
+        <SocialIcon href="mailto:clement.h.ou@gmail.com" IconComponent={EmailIcon} />
+        <SocialIcon href="https://plex.clementou.com" IconComponent={PlexIcon} />
       </div>
     </div>
   );
-}
+};
 
 export default Social;
