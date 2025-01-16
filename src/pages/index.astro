@@ -7,23 +7,24 @@ const projects = [
 	{
 		title: "CMU AI Poker",
 		url: "https://poker.cmudsc.com/",
-		description: "Built and scaled CMU's largest AI poker tournament",
+		description: "Led development and organization of $100k prize pool AI competition platform, scaling to 500+ users and 10k+ daily matches",
+	},
+	{
+		title: "GPT-2 Training Pipeline",
+		description: "Optimized GPT-2 (31M params) training on 10B tokens, achieving 0.33 HellaSwag score",
+	},
+	{
+		title: "Twitter PageRank",
+		description: "Built distributed graph processing system in Spark for analyzing 1M+ vertex social network",
+	},
+	{
+		title: "MuZero Implementation",
+		description: "Implemented deep reinforcement learning system with Monte Carlo Tree Search and GPU acceleration",
 	},
 	{
 		title: "Zoom AI Companion Analysis",
 		url: "https://www.linkedin.com/posts/shubhamshastri22_part-13-as-my-masters-program-draws-to-ugcPost-7189417441494544385-6LmH",
-		description:
-			"Best Team Project Award - Evaluated Zoom's AI offering against NIST AI RMF & EU AI Act",
-	},
-	{
-		title: "Spark PageRank",
-		description:
-			"Implemented scalable PageRank algorithm in Spark, processing full Twitter dataset",
-	},
-	{
-		title: "AI Emotion Detection",
-		url: "https://github.com/zikegcwk/aicamp_emotion",
-		description: "Developed YOLO-based emotion detection system",
+		description: "Best Team Project Award - Analysis of Zoom AI against NIST AI RMF & EU AI Act",
 	},
 ];
 const socials = {
@@ -62,9 +63,13 @@ const socials = {
 				<div>
 					<div class="mb-4">
 						<h1 class="text-4xl font-serif mb-2">{name}</h1>
-						<p class="text-gray-600 font-sans">/'klɛmənt 'oʊ/ • 欧华 (Ōu Huá) • he/him</p>
+						<p class="text-gray-600 font-sans">
+							/'klɛmənt 'oʊ/ • 欧华 (Ōu Huá) • he/him
+						</p>
 					</div>
-					<p class="text-gray-600 leading-relaxed mb-4 font-sans">{bio}</p>
+					<p class="text-gray-600 leading-relaxed mb-4 font-sans">
+						{bio}
+					</p>
 					<a
 						href="/resume.pdf"
 						class="inline-block text-gray-600 hover:text-gray-900 border-b border-gray-300 hover:border-gray-900 transition-colors font-sans"
@@ -77,7 +82,9 @@ const socials = {
 
 			<!-- Projects Section -->
 			<div class="space-y-6">
-				<h2 class="text-2xl font-sans font-medium">Selected Projects</h2>
+				<h2 class="text-2xl font-sans font-medium">
+					Selected Projects
+				</h2>
 				<div class="space-y-4">
 					{
 						projects.map((project) =>
@@ -87,13 +94,21 @@ const socials = {
 									class="block p-4 border border-gray-200 rounded-lg hover:border-gray-400 transition-colors font-sans"
 									data-umami-event={`project-click-${project.title.toLowerCase().replace(/\s+/g, "-")}`}
 								>
-									<h3 class="text-lg font-medium mb-1">{project.title}</h3>
-									<p class="text-gray-600 text-sm">{project.description}</p>
+									<h3 class="text-lg font-medium mb-1">
+										{project.title}
+									</h3>
+									<p class="text-gray-600 text-sm">
+										{project.description}
+									</p>
 								</a>
 							) : (
 								<div class="block p-4 border border-gray-200 rounded-lg font-sans">
-									<h3 class="text-lg font-medium mb-1">{project.title}</h3>
-									<p class="text-gray-600 text-sm">{project.description}</p>
+									<h3 class="text-lg font-medium mb-1">
+										{project.title}
+									</h3>
+									<p class="text-gray-600 text-sm">
+										{project.description}
+									</p>
 								</div>
 							),
 						)
