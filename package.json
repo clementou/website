@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/tailwind": "5.1.4",
+    "@fontsource-variable/cormorant": "^5.2.8",
+    "@fontsource/spectral": "^5.2.8",
     "astro": "5.1.7",
-    "tailwindcss": "^3.4.15",
     "typescript": "^5.6.3"
   }
 }

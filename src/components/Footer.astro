@@ -1,0 +1,24 @@
+---
+import { links, site } from "../data/site";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer wrap">
+	<nav class="footer-links" aria-label="Contact links">
+		{
+			links.map((link) => (
+				<a
+					href={link.href}
+					data-umami-event={link.event}
+					{...link.href.startsWith("http")
+						? { target: "_blank", rel: "noopener" }
+						: {}}
+				>
+					{link.label}
+				</a>
+			))
+		}
+	</nav>
+	<p class="footer-close">{site.location} · {year}</p>
+</footer>

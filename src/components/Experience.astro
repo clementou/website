@@ -1,0 +1,55 @@
+---
+import { experience } from "../data/site";
+---
+
+<section class="section wrap" id="experience">
+	<h2>Experience</h2>
+	<ul class="xp-list">
+		{
+			experience.map((xp) => (
+				<li class="xp-row">
+					<span class="xp-org">
+						{xp.href ? (
+							<a href={xp.href} target="_blank" rel="noopener">
+								{xp.org}
+							</a>
+						) : (
+							xp.org
+						)}
+						<span class="xp-role">{xp.role}</span>
+					</span>
+					{xp.note && <span class="xp-note">{xp.note}</span>}
+					{xp.more && (
+						<span class="xp-note">
+							<details class="xp-more">
+								<summary>
+									school work<span class="chev">›</span>
+								</summary>
+								<ul class="xp-more-list">
+									{xp.more.map((m) => (
+										<li>
+											{m.href ? (
+												<a
+													class="t"
+													href={m.href}
+													target="_blank"
+													rel="noopener"
+													data-umami-event={m.event}
+												>
+													{m.title}
+												</a>
+											) : (
+												<span class="t">{m.title}</span>
+											)}
+											<p>{m.note}</p>
+										</li>
+									))}
+								</ul>
+							</details>
+						</span>
+					)}
+				</li>
+			))
+		}
+	</ul>
+</section>

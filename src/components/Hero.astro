@@ -1,0 +1,27 @@
+---
+import { site } from "../data/site";
+import Sea from "./Sea.astro";
+---
+
+<section class="hero">
+	<Sea />
+	<div class="hero-inner">
+		<div class="name-row rise" style="--d: 0.15s">
+			<h1 class="hero-name">{site.name}</h1>
+		</div>
+		<p class="hero-pron rise" style="--d: 0.3s">
+			{site.pronunciation}<span class="sep">·</span>{site.chineseName}<span
+				class="sep">·</span
+			>{site.pronouns}
+		</p>
+		<div class="hero-role rise" style="--d: 0.5s">
+			<p class="role-main">
+				Agent Engineer at <a
+					href="https://sierra.ai"
+					target="_blank"
+					rel="noopener">Sierra</a
+				>.
+			</p>
+		</div>
+	</div>
+</section>
