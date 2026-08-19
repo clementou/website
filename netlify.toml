@@ -3,9 +3,9 @@
 # these rules proxy it onto this domain.
 #
 # Note: Netlify strips trailing slashes when matching `from`, so a
-# "/fish" -> "/fish/" 301 would loop. Instead we proxy both forms and
-# let public/fish.html bounce the bare "/fish" URL to "/fish/" so
-# relative assets resolve correctly.
+# "/fish" -> "/fish/" 301 would loop. Both forms are proxied instead;
+# the fish app itself bounces bare "/fish" to "/fish/" client-side so
+# its relative asset paths resolve.
 
 [[redirects]]
   from = "/fish"
