@@ -1,14 +1,18 @@
 # Serve The Fish Club (github.com/clementou/fish) under /fish.
 # The fish site deploys independently to clementou-fish.netlify.app;
 # these rules proxy it onto this domain.
+#
+# Note: Netlify strips trailing slashes when matching `from`, so a
+# "/fish" -> "/fish/" 301 would loop. Instead we proxy both forms and
+# let public/fish.html bounce the bare "/fish" URL to "/fish/" so
+# relative assets resolve correctly.
 
 [[redirects]]
   from = "/fish"
-  to = "/fish/"
-  status = 301
+  to = "https://clementou-fish.netlify.app/"
+  status = 200
 
 [[redirects]]
   from = "/fish/*"
   to = "https://clementou-fish.netlify.app/:splat"
   status = 200
-  force = true
