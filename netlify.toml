@@ -16,3 +16,14 @@
   from = "/fish/*"
   to = "https://clementou-fish.netlify.app/:splat"
   status = 200
+
+# The restaurant atlas deploys independently, just like /fish.
+[[redirects]]
+  from = "/restaurants"
+  to = "https://clementou-restaurants.netlify.app/"
+  status = 200
+
+[[redirects]]
+  from = "/restaurants/*"
+  to = "https://clementou-restaurants.netlify.app/:splat"
+  status = 200
