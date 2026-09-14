@@ -327,6 +327,21 @@ a:focus-visible {
 	text-decoration: none;
 }
 
+.footer-projects {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.25rem 0.75rem;
+	margin-top: 1.25rem;
+	color: var(--muted);
+	font-size: 0.8125rem;
+}
+
+.footer-projects-label {
+	font-style: italic;
+	margin-right: 0.25rem;
+}
+
 .footer-close {
 	margin-top: 2.2rem;
 	font-size: 0.8125rem;
